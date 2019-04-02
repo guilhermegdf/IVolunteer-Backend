@@ -1,0 +1,34 @@
+from flask import jsonify, request
+from flask_restful import Resource, reqparse
+from models.VolunteerModel import VolunteerModel, VolunteerSchema
+from utils.custom_response import custom_response
+
+
+schema = VolunteerSchema()
+
+class SignupVolunter(Resource):
+
+    def post(self):
+        req_data = request.get_json()
+        data, error = schema.load(req_data)
+
+        if error:
+            return custom_response(error, 400)
+
+        # check if email already exist in the db
+        user_in_db = VolunteerModel.get_by_email(data.get('email'))
+        if user_in_db:
+            message = {'error': 'Email already exist, please supply another email address'}
+            return custom_response(message, 400)
+
+        # check if username already exist in the db
+        user_in_db = VolunteerModel.get_by_username(data.get('username'))
+        if user_in_db:
+            message = {'error': 'User already exist, please supply another username'}
+            return custom_response(message, 400)
+
+        user = VolunteerModel(data)
+        user.save()
+
+        message = {'return':'Volunteer register Okay'}
+        return jsonify(message, 201)

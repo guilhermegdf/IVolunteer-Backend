@@ -1,0 +1,13 @@
+{
+	"username":"guilhermegdf",
+	"password":"2redp@ndas",
+	"name":"Guilherme Dias Fonseca",
+	"email":"guilhermegdf@hotmail.com",
+	"phone":"11 997794163",
+	"birth":"20/10/1996",
+	"address":"Rua Plinio Cólas",
+	"city":"São Paulo",
+	"state":"São Paulo",
+	"profession_id": 2
+}
+

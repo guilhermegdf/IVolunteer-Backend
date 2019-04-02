@@ -1,0 +1,691 @@
+1,Administrador de Banco de Dados
+2,Açougueiro
+3,Acompanhante de Idosos
+4,Acupunturista
+5,Administrador de Empresas
+6,Administrador de Redes
+7,Administrador de Redes Junior
+8,Administrador de Redes Pleno
+9,Administrador de Redes Sênior
+10,Administrador de Sistemas
+11,Administrador Hospitalar
+12,Administrador Público
+13,Advogado
+14,Advogado Civil
+15,Aeronauta
+16,Afiador de Ferramentas
+17,Agente Comunitário de Saúde
+18,Agente de Defesa Sanitária
+19,Agente de Viagens
+20,Agente Funerário
+21,Agente Penitenciário
+22,Agricultor
+23,Agrônomo
+24,Ajudante de Motorista
+25,Ajudante de Transportes
+26,Alfaiate
+27,Almirante
+28,Almoxarife
+29,Ambientalista
+30,Ambulante
+31,Analista Administrativo
+32,Analista Administrativo de Vendas
+33,Analista Administrativo Financeiro
+34,Analista Ambiental
+35,Analista Comercial Interno
+36,Analista Comercial Externo
+37,Analista de Atendimento a Clientes
+38,Analista de Atendimento Comercial
+39,Analista de Banco
+40,Analista de Banco de Dados
+41,Analista de Cargos e Salários
+42,Analista de Cobrança
+43,Analista de Comércio Exterior
+44,Analista de Compras
+45,Analista de Comunicação
+46,Analista de Contabilidade
+47,Analista de Contas a Pagar e Receber
+48,Analista de Controladoria
+49,Analista de Controladoria Junior
+50,Analista de Controladoria Pleno
+51,Analista de Controladoria Sênior
+52,Analista de Controle de Qualidade
+53,Analista de Crédito e Cobrança
+54,Analista de Custos
+55,Analista de Departamento Pessoal
+56,Analista de Desenvolvimento de Produto
+57,Analista de Desenvolvimento de Sistemas
+58,Analista de Desenvolvimento Web
+59,Analista de Distribuição
+60,Analista de E-commerce
+61,Analista de Estoque
+62,Analista de Engenharia Elétrica
+63,Analista Financeiro
+64,Analista de Fiscal
+65,Analista Químico
+66,Anestesiologista
+67,Angiologista
+68,Antropólogo
+69,Apicultor
+70,Apresentador
+71,Argumentista
+72,Armador
+73,Armeiro
+74,Arquiteto
+75,Arquiteto de Interiores
+76,Arquiteto Paisagista
+77,Arquiteto Urbanista
+78,Arquiteto Projetista
+79,Arquiteto Vendedor
+80,Arquivista
+81,Arrumadeira
+82,Artista de Espetáculo de Diversões
+83,Artista Plástico
+84,Ascensorista
+85,Assessor de Imprensa
+86,Analista de Fundição
+87,Analista de Informática
+88,Analista de Investimentos
+89,Analista de Logística
+90,Analista de Loja
+91,Analista de Manutenção
+92,Analista de Manutenção Elétrica
+93,Analista de Marketing
+94,Analista de PCP
+95,Analista de Produção
+96,Analista de Programação
+97,Analista de Publicidade e Propaganda
+98,Analista de Qualidade
+99,Analista de Recrutamento e Seleção
+100,Analista de Recursos Humanos
+101,Analista de Redes
+102,Analista de Relações Públicas
+103,Analista de Representação Comercial
+104,Analista de SAC
+105,Analista de Segurança Patrimonial
+106,Analista de Seguros
+107,Analista de Sistemas
+108,Analista de Suporte Técnico
+109,Analista de Suprimentos
+110,Analista de Tecnologia da Informação (TI)
+111,Analista de Telecomunicações
+112,Analista de Telemarketing Ativo
+113,Analista de Telemarketing Receptivo
+114,Analista de Tesouraria
+115,Analista de Transportes
+116,Analista de Treinamento
+117,Analista de Treinamento Sênior
+118,Analista Econômico
+119,Assistente Comercial Interno
+120,Assistente de Almoxarifado
+121,Assistente de Arquitetura
+122,Assistente Administrativo
+123,Assistente de Atendimento a Clientes
+124,Assistente de Atendimento Comercial
+125,Assistente de Cobrança
+126,Assistente de Comércio Exterior
+127,Assistente de Compras
+128,Assistente de Comunicação
+129,Assistente de Contabilidade
+130,Assistente de Contas a Pagar e Receber
+131,Assistente de Controladoria
+132,Assistente de Controle de Qualidade
+133,Assistente de Cozinha
+134,Assistente de Crédito e Cobrança
+135,Assistente de Custos
+136,Assistente de Departamento Pessoal
+137,Assistente de Desenvolvimento de Produto
+138,Assistente de Desenvolvimento de Sistemas
+139,Assistente de Distribuição
+140,Assistente de E-commerce
+141,Assistente de Enfermagem
+142,Assistente de Engenharia Elétrica
+143,Assistente de Estoque
+144,Assistente Financeiro
+145,Assistente de Informática
+146,Assistente de Jornalismo
+147,Assistente de Limpeza
+148,Assistente de Logística
+149,Assistente de Loja
+150,Assistente de Manutenção
+151,Assistente de Manutenção Elétrica
+152,Assistente de Marketing
+153,Assistente de PCP
+154,Assistente de Produção
+155,Assistente de Publicidade e Propaganda
+156,Assistente de Qualidade
+157,Assistente de Recrutamento e Seleção
+158,Assistente de Recursos Humanos
+159,Assistente de Representação Comercial
+160,Assistente de SAC
+161,Assistente de Seguros
+162,Assistente de Sistemas
+163,Assistente de Suporte Técnico
+164,Assistente de Suprimentos
+165,Assistente de Tecnologia da Informação (TI)
+166,Assistente de Telecomunicações
+167,Assistente de Telemarketing Ativo
+168,Assistente de Telemarketing Receptivo
+169,Assistente de Tesouraria
+170,Assistente de Transportes
+171,Assistente de Treinamento
+172,Assistente de Vendas Externas
+173,Assistente Editorial
+174,Assistente Fiscal
+175,Assistente Social
+176,Astrônomo
+177,Atendente
+178,Atendente de Agência
+179,Atendente Distribuidor
+180,Auditor Ambiental
+181,Auditor de Qualidade
+182,Auditor Externo
+183,Auditor Interno
+184,Auxiliar de Almoxarifado
+185,Auxiliar de Almoxarife
+186,Auxiliar de Arquivo
+187,Auxiliar de Banco de Dados
+188,Auxiliar de Biblioteca
+189,Auxiliar de Comércio Exterior
+190,Auxiliar de Contas a Pagar e Receber
+191,Auxiliar de Controle de Qualidade
+192,Auxiliar de Cozinha
+193,Auxiliar de Crédito e Cobrança
+194,Auxiliar de Custos
+195,Auxiliar de Distribuição
+196,Auxiliar de Engenharia de Segurança do Trabalho
+197,Auviliar de Escritório
+198,Auxiliar de Fundição
+199,Auxiliar de Instalação
+200,Auxiliar de Limpeza
+201,Auxiliar de Manutenção Hidráulica
+202,Auxiliar de Padeiro
+203,Auxiliar de PCP
+204,Auxiliar de Programação
+205,Auxiliar de SAC
+206,Auxiliar de Segurança
+207,Auxiliar de Serralheiro
+208,Auxiliar de Suprimentos
+209,Auxiliar de Topografia
+210,Auxiliar de Transportes
+211,Auxiliar de Usinagem
+212,Auxiliar de Veterinária
+213,Auxiliar de Web Design
+214,Auxiliar Econômico
+215,Auxiliar Fiscal
+216,Auxiliar Jurídico
+217,Bartender
+218,Babá
+219,Balconista
+220,Bancário
+221,Barman
+222,Biblioteconista
+223,Biólogo
+224,Biomédico
+225,Bioquímico
+226,Biotecnólogo
+227,Bombeiro
+228,Borracheiro
+229,Cabeleireiro
+230,Cadista
+231,Cardiologista
+232,Cartazista
+233,Carteiro
+234,Cenógrafo
+235,Ceramista
+236,Cineasta
+237,Cinegrafista
+238,Cirurgião Plástico
+239,Clínico Geral
+240,Cobrador de Coletivo
+241,Comissário de Bordo
+242,Confeiteiro
+243,Conferente
+244,Conferente de Loja
+245,Consultor Contábil
+246,Consultor de Marketing
+247,Consultor de Moda
+248,Consultor de Qualidade
+249,Consultor de Vendas Externas
+250,Consultor de Viagens
+251,Contador
+252,Controlador de Tráfego
+253,Coordenador Administrativo
+254,Coordenador Comercial Externo
+255,Coordenador Comercial Interno
+256,Coordenador de Almoxarifado
+257,Coordenador de Arquitetura
+258,Coordenador de Atendimento Comercial
+259,Coordenador de Atendimento a Clientes
+260,Coordenador de Banco
+261,Coordenador de Cargos e Salários
+262,Coordenador de Cobrança
+263,Coordenador de Comércio Exterior
+264,Coordenador de Compras
+265,Coordenador de Comunicação
+266,Coordenador de Contabilidade
+267,Coordenador de Controladoria
+268,Coordenador de Controle de Qualidade
+269,Coordenador de Cozinha
+270,Coordenador de Crédito e Cobrança
+271,Coordenador de Custos
+272,Coordenador de Departamento Pessoal
+273,Coordenador de Desenvolvimento de Produto
+274,Coordenador de Desenvolvimento de Sistemas
+275,Coordenador de Diagramação
+276,Coordenador de E-commerce
+277,Coordenador de Enfermagem
+278,Coordenador de Engenharia e Segurança do Trabalho
+279,Coordenador de Engenharia Elétrica
+280,Coordenador de Estoque
+281,Coordenador de Fundição
+282,Coordenador de Informática
+283,Coordenador de Jornalismo
+284,Coordenador de Limpeza
+285,Coordenador de Logística
+286,Coordenador de Loja
+287,Coordenador de Manutenção
+288,Coordenador de Manutenção Elétrica
+289,Coordenador de Marketing
+290,Coordenador de PCP
+291,Coordenador de Produção
+292,Coordenador de Publicidade e Propaganda
+293,Coordenador de Qualidade
+294,Coordenador de Recrutamento e Seleção
+295,Coordenador de Recursos Humanos
+296,Coordenador de Representação Comercial
+297,Coordenador de SAC
+298,Coordenador de Salão
+299,Coordenador de Segurança Patrimonial
+300,Coordenador de Seguros
+301,Coordenador de Sistemas
+302,Coordenador de Suporte Técnico
+303,Coordenador de Suprimentos
+304,Coordenador de Tecnologia da Informação
+305,Coordenador de Telecomunicações
+306,Coordenador de Telemarketing Ativo
+307,Coordenador de Telemarketing Receptivo
+308,Coordenador de Tesouraraia
+309,Coordenador de Transportes
+310,Coordenador de Treinamento
+311,Coordenador de Usinagem
+312,Coordenador Econômico
+313,Coordenador Financeiro
+314,Coordenador Fiscal
+315,Coordenador Químico
+316,Corretor de Seguros
+317,Cozinheiro
+318,Diretor Administrativo
+319,Dentista
+320,Desenhista
+321,Designer de Interiores
+322,Designer de Moda
+323,Diagramador
+324,Diretor Comercial Externo
+325,Diretor Comercial Interno
+326,Diretor de Cinema
+327,Diretor de Prdução
+328,Diretor de Representação Comercial
+329,Diretor de Recursos Humanos
+330,Diretor de Tecnologia da Informação (TI)
+331,Diretor de Marketing
+332,Diretor Financeiro
+333,Diretor de Informática
+334,Diretor de Jornalismo
+335,Diretor de Suporte Técnico
+336,Diretor de Logística
+337,Diretor de Departamento Pessoal
+338,Ecologista
+339,Economista
+340,Editor
+341,Educador
+342,Eletricista
+343,Eletricista de Manutenção
+344,Embalador
+345,Empreagdo (a) Doméstico (a)
+346,Encanador
+347,Encarregado de Almoxarifado
+348,Encarregado de PCP
+349,Encarregado de Recursos Humanos
+350,Encarregado de Segurança
+351,Encarregado de Transporte
+352,Encarregado de Usinagem
+353,Endocrinologista
+354,Engenheiro Têxtil
+355,Enfermeiro
+356,Engenheiro Aeronáutico
+357,Engenheiro Agrimensor
+358,Engenheiro Agrônomo
+359,Engenheiro Ambiental
+360,Engenheiro Civil
+361,Engenheiro Civil Junior
+362,Engenheiro Civil Pleno
+363,Engenheiro Civil Sênior
+364,Engenheiro da Computação
+365,Engenheiro de Alimentos
+366,Engenheiro de Engenharia e Segurança do Trabalho
+367,Engenheiro de Produção
+368,Engenheiro de Suprimentos
+369,Engenheiro de Telecomunicações
+370,Engenheiro Eletricista
+371,Engenheiro Metalúrgico
+372,Engenheiro Naval
+373,Engenheiro Nuclear
+374,Estagiário Comercial Externo
+375,Estagiário Comercial Interno
+376,Estagiário Administrativo
+377,Estagiário de Arquitetura
+378,Estagiário de Atendimento Comercial
+379,Estagiário de Atendimento a Clientes
+380,Estagiário de Banco
+381,Estagiário de Banco de Dados
+382,Estagiário de Biomedicina
+383,Estagiário de Cobrança
+384,Estagiário de Comércio Exterior
+385,Estagiário de Compras
+386,Estagiário de Comunicação
+387,Estagiário de Contabilidade
+388,Estagiário de Controladoria
+389,Estagiário de Controle de Qualidade
+390,Estagiário de Cozinha
+391,Estagiário de Custos
+392,Estagiário de Departamento Pessoal
+393,Estagiário de Desenho Industrial
+394,Estagiário de Desenvolvimento de Produto
+395,Estagiário de Desenvolvimento de Sistemas
+396,Estagiário de Diagramação
+397,Estagiário de Distribuição
+398,Estagiário de E-commerce
+399,Estagiário de Economia
+400,Estagiário de Edificações
+401,Estagiário de Educação Física
+402,Estagiário de Enfermagem
+403,Estagiário de Engenharia de Alimentos
+404,Estagiário de Engenharia de Telecomunicações
+405,Estagiário de Engenharia e Segurança do Trabalho
+406,Estagiário de Engenharia Elétrica
+407,Estagiário de Estoque
+408,Estagiário de Gastronomia
+409,Estagiário de Gestão Abiental
+410,Estagiário de Informática
+411,Estagiário de Jornalismo
+412,Estagiário de Letras
+413,Estagiário de Logística
+414,Estagiário de Manutenção
+415,Estagiário de Manutenção Elétrica
+416,Estagiário de Marketing
+417,Estagiário de PCP
+418,Estagiário de Produção
+419,Estagiário de Publicidade e Propaganda
+420,Estagiário de Qualidade
+421,Estagiário de Recrutamento e Seleção
+422,Estagiário de Recursos Humanos
+423,Estagiário de Representação Comercial
+424,Estagiário de SAC
+425,Estagiário de Sistemas
+426,Estagiário de Suporte Técnico
+427,Estagiário de Suprimentos
+428,Estagiário de Tecnologia da Informação (TI)
+429,Estagiário de Telecomunicaçãoes
+430,Estagiário de Telemarketing Ativo
+431,Estagiário de Telemarketing Receptivo
+432,Estagiário de Tesouraria
+433,Estagiário de Veterinária
+434,Estagiário de Web Design
+435,Estagiário Financeiro
+436,Estagiário Fiscal
+437,Estagiário Químico
+438,Esteticista
+439,Estilista
+440,Estoquista
+441,Estoquista de Loja
+442,Fundidor
+443,Farmacêutico
+444,Feirante
+445,Filósofo
+446,Físico
+447,Fisioterapeuta
+448,Fonoaudiólogo
+449,Fotógrafo
+450,Fresador
+451,Fresador CNC
+452,Fresador Ferramenteiro
+453,Garçom
+454,Gari
+455,Gastrônomo
+456,Geofísico
+457,Geográfo
+458,Geólogo
+459,Gerente Administrativo
+460,Gerente Comercial Externo
+461,Gerente Comercial Interno
+462,Gerente Comercial Interno
+463,Gerente de Atendimento a Clientes
+464,Gerente de Atendimento Comercial
+465,Gerente de Banco
+466,Gerente de Cobrança
+467,Gerente de Comércio Exterior
+468,Gerente de Compras
+469,Gerente de Comunicação
+470,Gerente de Contabilidade
+471,Gerente de Contas
+472,Gerente de Controladoria
+473,Gerente de Controle de Qualidade
+474,Gerente de Cozinha
+475,Gerente de Departamento Pessoal
+476,Gerente de Desenvolvimento de Produto
+477,Gerente de Desenvolvimento de Sistemas
+478,Gerente de Distribuição
+479,Gerente de E-commerce
+480,Gerente de Enfermagem
+481,Gerente de Engenharia Elétrica
+482,Gerente de Estoque
+483,Gerente de Hotelaria
+484,Gerente de Informática
+485,Gerente de Jornalismo
+486,Gerente de Logística
+487,Gerente de Loja
+488,Gerente de Manutenção
+489,Gerente de Manutenção Elétrica
+490,Gerente de Marketing
+491,Gerente de PCP
+492,Gerente de Produção
+493,Gerente de Publicidade e Propaganda
+494,Gerente de Qualidade
+495,Gerente de Recrutamento e Seleção
+496,Gerente de Recursos Humanos
+497,Gerente de Representação Comercial
+498,Gerente de SAC
+499,Gerente de Salão
+500,Gerente de Segurança Patrimonial
+501,Gerente de Seguros
+502,Gerente de Sistemas
+503,Gerente de Suporte Técnico
+504,Gerente de Suprimentos
+505,Gerente de Tecnologia da Informação (TI)
+506,Gerente de Telecomunicações
+507,Gerente de Telemarketing Ativo
+508,Gerente de Telemarketing Receptivo
+509,Gerente de Tesouraria
+510,Gerente de Transportes
+511,Gerente Financeiro
+512,Gerente Fiscal
+513,Gerente Químico
+514,Geriatra
+515,Gestor Ambiental
+516,Ginecologista
+517,Governanta
+518,Homeopata
+519,Historiador
+520,Inspetor de Controle de Qualidade
+521,Instalador de Acessórios Automotivos
+522,Instalador de Alarmes
+523,Instalador de Cabeamento Estruturado
+524,Instalador de Telecomunicações
+525,Instrutor de Treinamento
+526,Jornalista
+527,Jardineiro
+528,Líder de Produção
+529,Líder de Usinagem
+530,Locutor
+531,Maestro
+532,Mandrilhador
+533,Manicure/Pedicure
+534,Manobrista
+535,Maquiador
+536,Marceneiro
+537,Marinheiro
+538,Matemático
+539,Mecânico
+540,Mecânico de Automóveis
+541,Mecânico de Manutenção Hidráulica
+542,Médico
+543,Mestre-de-Obras
+544,Modelo
+545,Monitor de Atendimento a Clientes
+546,Monitor de Telemarketing Ativo
+547,Monitor de Telemarketing Receptivo
+548,Motoboy
+549,Motorista
+550,Neurologista
+551,Nutricionista
+552,Obstetra
+553,Oftalmologista
+554,Operador de Atendimento a Clientes
+555,Operador de Caixa
+556,Operador de Fundição
+557,Operador de Guilhotina
+558,Operador de Logística
+559,Operador de Produção
+560,Operador de SAC
+561,Operador de Telemarketing Ativo
+562,Operador de Telemarketing Receptivo
+563,Operador de Torno
+564,Operador de Usinagem
+565,Ortopedista
+566,Otorrinolaringologista
+567,Psicólogo
+568,Padeiro
+569,Pescador
+570,Paisagista
+571,Pediatra
+572,Pedreiro
+573,Pintor
+574,Podólogo
+575,Polidor
+576,Produtor Editorial
+577,Professor de Educação
+578,Professor de Letras
+579,Programador de Centro de Usinagem
+580,Programador de PCP
+581,Promotor Bancário
+582,Químico
+583,Recepcionista
+584,Radialista
+585,Radiologista
+586,Redator
+587,Repórter
+588,Representante Comercial
+589,Supervisor Administrativo
+590,Secretária
+591,Serralheiro
+592,Supervisor Comercial Externo
+593,Supervisor Comercial Interno
+594,Supervisor de Almoxarifado
+595,Supervisor de Atendimento a Clientes
+596,Supervisor de Atendimento Comercial
+597,Supervisor de Banco
+598,Supervisor de Cargos e Salários
+599,Supervisor de Cobrança
+600,Supervisor de Comércio Exterior
+601,Supervisor de Compras
+602,Supervisor de Comunicação
+603,Supervisor de Contabilidade
+604,Supervisor de Controladoria
+605,Supervisor de Controle de Qualidade
+606,Supervisor de Cozinha
+607,Supervisor de Crédito e Cobrança
+608,Supervisor de Custos
+609,Supervisor de Departamento Pessoal
+610,Supervisor de Desenvolvimento de Produto
+611,Supervisor de Desenvolvimento de Sistemas
+612,Supervisor de Distribuição
+613,Supervisor de E-commerce
+614,Supervisor de Enfermagem
+615,Supervisor de Engenharia e Segurança do Trabalho
+616,Supervisor de Engenharia Elétrica
+617,Supervisor de Estoque
+618,Supervisor de Fundição
+619,Supervisor de Informática
+620,Supervisor de Limpeza
+621,Supervisor de Logística
+622,Supervisor de loja
+623,Supervisor de Manutenção
+624,Supervisor de Marketing
+625,Supervisor de Manutenção Elétrica
+626,Supervisor de PCP
+627,Supervisor de Produção
+628,Supervisor de Publicidade e Propaganda
+629,Supervisor de Qualidade
+630,Supervisor de Recrutamento e Seleção
+631,Supervisor de Recursos Humanos
+632,Supervisor de Representação Comercial
+633,Supervisor de SAC
+634,Supervisor de Salão
+635,Supervisor de Segurança
+636,Supervisor de Segurança Patrimonial
+637,Supervisor de Seguros
+638,Supervisor de Sistemas
+639,Supervisor de Suporte Técnico
+640,Supervisor de Suprimentos
+641,Supervisor de Tecnologia da Informação (TI)
+642,Supervisor de Telecomunicações
+643,Supervisor de Telemarketing Ativo
+644,Supervisor de Telemarketing Receptivo
+645,Supervisor de Tesouraria
+646,Supervisor de Transportes
+647,Supervisor de Usinagem
+648,Supervisor Econômico
+649,Supervisor Financeiro
+650,Supervisor Fiscal
+651,Técnico Ambiental
+652,Técnico de Controle de Qualidade
+653,Técnico de Edificações
+654,Técnico de Suporte
+655,Técnico em Manutenção Elétrica
+656,Técnico em Análise Clínica
+657,Técnico em Análise Química
+658,Técnico em Automação
+659,Técnico em Guia de Turismo
+660,Técnico em Hardware
+661,Técnico em Metalúrgica
+662,Técnico em Redes
+663,Técnico em Secretariado
+664,Técnico em Secretariado Escolar
+665,Técnico em Transações Imobiliárias
+666,Técnico em Zootecnia
+667,Técnico Instalador
+668,Técnico em Telecomunicações
+669,Tesoureiro
+670,Topógrafo
+671,Tradutor
+672,Traumatologista
+673,Turismólogo
+674,Urologista
+675,Vendedor Externo
+676,Vendedor de Loja
+677,Vendedor Interno
+678,Veterinário
+679,Vigilante
+680,Vigilante Condutor
+681,Vigilante de Escolta
+682,Vigilante de Monitoramento
+683,Vigilante de Segurança Patrimonial
+684,Vigilante de Segurança Social Privada
+685,Vigilante Líder
+686,Vitrinista
+687,Web Design
+688,Web Design Sênior
+689,Web Design Junior
+690,Zelador
+691,Zootecnista
