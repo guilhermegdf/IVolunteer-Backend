@@ -18,7 +18,7 @@ class SignupOng(Resource):
             return custom_response(error, 400)
 
         # check if email already exist in the db
-        user_in_db = ONGsModel.get_user_by_email(data.get('email'))
+        user_in_db = ONGsModel.get_by_email(data.get('email'))
         if user_in_db:
             message = {'error': 'Email already exist, please supply another email address'}
             return custom_response(message, 400)
@@ -29,7 +29,7 @@ class SignupOng(Resource):
             message = {'error': 'User already exist, please supply another username'}
             return custom_response(message, 400)
 
-        if cnpj_number.validate(data.get('cnpj')):
+        if cpfcnpj.validate(data.get('cnpj')):
 
             user_in_db = ONGsModel.get_by_cnpj(data.get('cnpj'))
             if user_in_db:

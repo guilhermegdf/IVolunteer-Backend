@@ -1,19 +1,21 @@
 from marshmallow import fields, Schema
 from db import db
+from werkzeug.security import generate_password_hash
 import datetime
 import pytz
+
 
 utc_now = pytz.utc.localize(datetime.datetime.utcnow())
 pst_now = utc_now.astimezone(pytz.timezone('Brazil/East'))
 
 
 class ONGsModel(db.Model):
-    __tablename__ = 'tb_ONGs'
+    __tablename__ = 'tb_ongs'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False)
-    password = db.Column(db.String(80), nullable=False)
-    cnpj = db.Column(db.Integer, nullable=False)
+    password = db.Column(db.String(200), nullable=False)
+    cnpj = db.Column(db.String(14), nullable=False)
     area_atuacao = db.Column(db.String(355), nullable=False)
     email = db.Column(db.String(355), nullable=False)
     data_abertura = db.Column(db.Date, nullable=True)
@@ -30,13 +32,13 @@ class ONGsModel(db.Model):
     def __init__(self, data):
 
         self.username = data.get('username')
-        self.password = data.password('password')
+        self.password = generate_password_hash(data.get('password'))
         self.cnpj = data.get('cnpj')
         self.area_atuacao = data.get('area_atuacao')
         self.email = data.get('email')
         self.data_abertura = data.get('data_abertura')
         self.responsavel = data.get('responsavel')
-        self.address = data.get('adress')
+        self.address = data.get('address')
         self.city = data.get('city')
         self.state = data.get('state')
         self.phone = data.get('phone')
@@ -97,3 +99,4 @@ class ONGsSchema(Schema):
   name = fields.Str(required=True)
   status = fields.Boolean(dump_only=True)
   created_at = fields.DateTime(dump_only=True)
+  descricao = fields.Str(required=True)
