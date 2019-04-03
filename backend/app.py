@@ -8,6 +8,7 @@ from resources.signup_volunteer import SignupVolunter
 from resources.signup_ong import SignupOng
 from resources.login_volunteer import LoginVolunteer
 from resources.login_ong import LoginOng
+from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
@@ -24,6 +25,13 @@ api.add_resource(LoginVolunteer, '/login/volunteer')
 api.add_resource(SignupVolunter, '/signup/volunteer')
 api.add_resource(LoginOng, '/login/ong')
 api.add_resource(SignupOng, '/signup/ong')
+api.add_resource(AssistenciaSocial, '/assistencia-social')
+api.add_resource(EducacaoPesquisa, '/educacao-pesquisa')
+api.add_resource(DevDefesaDireito, '/defesa-direito')
+api.add_resource(Cultura, '/cultura')
+api.add_resource(Saude, '/saude')
+api.add_resource(Habitacao, '/habitacao')
+api.add_resource(MeioAmbiente, '/meio-ambiente')
 
 if __name__ == '__main__':
     from db import db

@@ -5,7 +5,6 @@ from flask_jwt_extended import create_access_token
 
 from utils.custom_response import custom_response
 from models.VolunteerModel import VolunteerModel, VolunteerSchema
-from models.AreaModel import AreaModel
 
 schema = VolunteerSchema()
 
