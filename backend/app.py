@@ -16,10 +16,9 @@ app.config['JWT_SECRET_KEY'] = token
 jwt = JWTManager(app)
 api = Api(app)
 
-
 @jwt.user_claims_loader
 def add_claims_to_acess_token(identity):
-    return{"username":identity.get('username'), "type":identity.get('type')}
+    return{"id":identity.get('id'), "type":identity.get('type')}
 
 api.add_resource(LoginVolunteer, '/login/volunteer')
 api.add_resource(SignupVolunter, '/signup/volunteer')

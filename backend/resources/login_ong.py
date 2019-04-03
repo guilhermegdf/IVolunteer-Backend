@@ -26,6 +26,7 @@ class LoginOng(Resource):
             return custom_response({'error': 'invalid credentials'}, 400)
 
         password = schema.dump(user).data.get('password')
+
         if user and check_password_hash(password, data.get('password')):
             data = schema.dump(user).data
             data['type'] = 'ONG'

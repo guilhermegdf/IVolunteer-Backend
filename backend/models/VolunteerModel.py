@@ -1,6 +1,6 @@
 from marshmallow import fields, Schema
 from models.ProfessionModel import ProfessionModel
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 from db import db
 import datetime
 import pytz
@@ -79,15 +79,16 @@ class VolunteerModel(db.Model):
         return '<id {}>'.format(self.id)
 
 class VolunteerSchema(Schema):
-  username = fields.Str(required=True)
-  password = fields.Str(required=True)
-  name = fields.Str(required=True)
-  email = fields.Email(required=True)
-  phone = fields.Str(required=True)
-  birth = fields.Date()
-  address = fields.Str(required=True)
-  city = fields.Str(required=True)
-  state = fields.Str(required=True)
-  profession_id = fields.Int(required=True)
-  status = fields.Boolean(dump_only=True)
-  created_at = fields.DateTime(dump_only=True)
+    id = fields.Int(dump_only=True)
+    username = fields.Str(required=True)
+    password = fields.Str(required=True)
+    name = fields.Str(required=True)
+    email = fields.Email(required=True)
+    phone = fields.Str(required=True)
+    birth = fields.Date()
+    address = fields.Str(required=True)
+    city = fields.Str(required=True)
+    state = fields.Str(required=True)
+    profession_id = fields.Int(required=True)
+    status = fields.Boolean(dump_only=True)
+    created_at = fields.DateTime(dump_only=True)

@@ -1,14 +1,16 @@
 from flask import jsonify, request
 from flask_restful import Resource, reqparse
 from models.VolunteerModel import VolunteerModel, VolunteerSchema
+from models.AreaModel import AreaModel, AreaSchema
 from utils.custom_response import custom_response
 
 
 schema = VolunteerSchema()
-
+schema_area = AreaSchema()
 class SignupVolunter(Resource):
 
     def post(self):
+
         req_data = request.get_json()
         data, error = schema.load(req_data)
 
@@ -29,6 +31,11 @@ class SignupVolunter(Resource):
 
         user = VolunteerModel(data)
         user.save()
+
+        req_data['volunteer_id'] = user.id
+        data_area, error = schema_area.load(req_data)
+        area = AreaModel(data_area)
+        area.save()
 
         message = {'return':'Volunteer register Okay'}
         return jsonify(message, 201)

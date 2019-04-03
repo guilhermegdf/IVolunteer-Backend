@@ -8,7 +8,6 @@ import pytz
 utc_now = pytz.utc.localize(datetime.datetime.utcnow())
 pst_now = utc_now.astimezone(pytz.timezone('Brazil/East'))
 
-
 class ONGsModel(db.Model):
     __tablename__ = 'tb_ongs'
 
@@ -84,19 +83,20 @@ class ONGsModel(db.Model):
         return '<id {}>'.format(self.id)
 
 class ONGsSchema(Schema):
-  username = fields.Str(required=True)
-  password = fields.Str(required=True, load_only=True)
-  cnpj = fields.Str(required=True)
-  area_atuacao = fields.Str(required=True)
-  name = fields.Str(required=True)
-  email = fields.Email(required=True)
-  data_abertura = fields.Date()
-  responsavel = fields.Str(required=True)
-  address = fields.Str(required=True)
-  city = fields.Str(required=True)
-  state = fields.Str(required=True)
-  phone = fields.Str(required=True)
-  name = fields.Str(required=True)
-  status = fields.Boolean(dump_only=True)
-  created_at = fields.DateTime(dump_only=True)
-  descricao = fields.Str(required=True)
+    id = fields.Int(dump_only=True)
+    username = fields.Str(required=True)
+    password = fields.Str(required=True)
+    cnpj = fields.Str(required=True)
+    area_atuacao = fields.Str(required=True)
+    name = fields.Str(required=True)
+    email = fields.Email(required=True)
+    data_abertura = fields.Date()
+    responsavel = fields.Str(required=True)
+    address = fields.Str(required=True)
+    city = fields.Str(required=True)
+    state = fields.Str(required=True)
+    phone = fields.Str(required=True)
+    name = fields.Str(required=True)
+    status = fields.Boolean(dump_only=True)
+    created_at = fields.DateTime(dump_only=True)
+    descricao = fields.Str(required=True)
