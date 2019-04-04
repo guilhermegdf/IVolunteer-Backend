@@ -10,7 +10,7 @@ class AssistenciaSocial(Resource):
 
     def get(self):
 
-        res = AreaModel.get_all_for_meio_ambiente()
+        res = AreaModel.get_all_for_assistencia_social()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
 
