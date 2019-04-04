@@ -12,6 +12,7 @@ from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireit
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = token
 
 jwt = JWTManager(app)
