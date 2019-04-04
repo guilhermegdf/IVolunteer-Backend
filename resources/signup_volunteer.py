@@ -2,7 +2,7 @@ from flask import jsonify, request
 from flask_restful import Resource, reqparse
 from models.VolunteerModel import VolunteerModel, VolunteerSchema
 from models.AreaModel import AreaModel, AreaSchema
-from utils.custom_response import custom_response
+from utils.shortcuts import custom_response
 
 
 schema = VolunteerSchema()

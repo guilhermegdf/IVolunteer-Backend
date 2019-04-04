@@ -3,7 +3,7 @@ from flask_restful import Resource, reqparse
 from flask_jwt_extended import jwt_required
 
 from models.ONGsModel import ONGsModel, ONGsSchema
-from utils.custom_response import custom_response
+from utils.shortcuts import custom_response
 from pycpfcnpj import cpfcnpj
 
 schema = ONGsSchema()

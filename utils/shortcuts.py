@@ -7,3 +7,6 @@ def custom_response(res, status_code):
         response=json.dumps(res),
         status=status_code
         )
+
+def filter_data(data, val):
+    return [ res.get(val) for res in data.data ]
