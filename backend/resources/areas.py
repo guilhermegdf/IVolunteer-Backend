@@ -9,7 +9,6 @@ schema = AreaSchema(many=True)
 class AssistenciaSocial(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_meio_ambiente()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -17,7 +16,6 @@ class AssistenciaSocial(Resource):
 class Cultura(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_cultura()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -25,7 +23,6 @@ class Cultura(Resource):
 class Saude(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_saude()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -33,7 +30,6 @@ class Saude(Resource):
 class MeioAmbiente(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_meio_ambiente()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -41,7 +37,6 @@ class MeioAmbiente(Resource):
 class DevDefesaDireito(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_dev_defesa_direito()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -49,7 +44,6 @@ class DevDefesaDireito(Resource):
 class Habitacao(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_habitacao()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)
@@ -57,7 +51,6 @@ class Habitacao(Resource):
 class EducacaoPesquisa(Resource):
 
     def get(self):
-
         res = AreaModel.get_all_for_educacao_pesquisa()
         res_schema = schema.dump(res)
         return custom_response({'jwt_token': res_schema.data}, 200)

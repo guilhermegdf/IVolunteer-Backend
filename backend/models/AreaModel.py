@@ -40,7 +40,6 @@ class AreaModel(db.Model):
         db.session.delete(self)
         db.session.commit()
 
-
     @staticmethod
     def get_all_areas():
         return AreaModel.query.all()
