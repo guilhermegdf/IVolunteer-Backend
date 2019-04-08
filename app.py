@@ -11,7 +11,7 @@ from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = '#9FvjX%X/=A]?`=A;1ih[{:MY*kCgM'
