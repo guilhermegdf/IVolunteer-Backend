@@ -28,7 +28,7 @@ class Saude(Resource):
         return custom_response({'response': filter_data(res_schema, 'volunteer')}, 200)
 
 class MeioAmbiente(Resource):
-
+    
     def get(self):
         res = AreaModel.get_all_for_meio_ambiente()
         res_schema = schema.dump(res)
