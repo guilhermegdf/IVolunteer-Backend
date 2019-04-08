@@ -11,7 +11,7 @@ from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = '#9FvjX%X/=A]?`=A;1ih[{:MY*kCgM'
@@ -33,7 +33,7 @@ api.add_resource(DevDefesaDireito, '/defesa-direito')
 api.add_resource(Cultura, '/cultura')
 api.add_resource(Saude, '/saude')
 api.add_resource(Habitacao, '/habitacao')
-api.add_resource(MeioAmbiente, '/api/meio-ambiente')
+api.add_resource(MeioAmbiente, '/meio-ambiente')
 
 if __name__ == '__main__':
     from db import db
