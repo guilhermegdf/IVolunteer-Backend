@@ -1,6 +1,5 @@
 from flask import jsonify, request
 from flask_restful import Resource, reqparse
-
 from utils.shortcuts import custom_response, filter_data
 from models.AreaModel import AreaModel, AreaSchema
 

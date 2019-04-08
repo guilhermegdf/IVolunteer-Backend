@@ -1,9 +1,9 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Resource, Api
 from flask_jwt_extended import JWTManager
 
-from key import token
 from resources.signup_volunteer import SignupVolunter
 from resources.signup_ong import SignupOng
 from resources.login_volunteer import LoginVolunteer
@@ -11,9 +11,10 @@ from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = token
+app.config['JWT_SECRET_KEY'] = '#9FvjX%X/=A]?`=A;1ih[{:MY*kCgM'
 
 jwt = JWTManager(app)
 api = Api(app)
