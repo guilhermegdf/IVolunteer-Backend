@@ -40,6 +40,11 @@ class AreaModel(db.Model):
         db.session.delete(self)
         db.session.commit()
 
+
+    @staticmethod
+    def get_one(id):
+        return AreaModel.query.get(id)
+
     @staticmethod
     def get_all_areas():
         return AreaModel.query.all()
@@ -89,4 +94,4 @@ class AreaSchema(Schema):
     habitacao = fields.Boolean(required=True)
     educacao_pesquisa = fields.Boolean(required=True)
     volunteer_id = fields.Int(required=True)
-    volunteer = fields.Nested(VolunteerSchema)
+    volunteer = fields.Nested(VolunteerSchema, required=False)

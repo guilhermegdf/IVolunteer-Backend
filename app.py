@@ -9,6 +9,7 @@ from resources.signup_ong import SignupOng
 from resources.login_volunteer import LoginVolunteer
 from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
+from resources.user_details import MyDetails
 
 app = Flask(__name__)
 
@@ -29,6 +30,7 @@ api.add_resource(LoginVolunteer, '/login/volunteer')
 api.add_resource(SignupVolunter, '/signup/volunteer')
 api.add_resource(LoginOng, '/login/ong')
 api.add_resource(SignupOng, '/signup/ong')
+api.add_resource(MyDetails, '/my-details')
 api.add_resource(AssistenciaSocial, '/assistencia-social')
 api.add_resource(EducacaoPesquisa, '/educacao-pesquisa')
 api.add_resource(DevDefesaDireito, '/defesa-direito')
