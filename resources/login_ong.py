@@ -30,6 +30,6 @@ class LoginOng(Resource):
         if user and check_password_hash(password, data.get('password')):
             data = schema.dump(user).data
             data['type'] = 'ONG'
-            return custom_response({'jwt_token': create_access_token(identity=data)}, 200)
+            return custom_response(create_access_token(identity=data), 200)
         else:
             return custom_response({'error': 'invalid credentials'}, 400)

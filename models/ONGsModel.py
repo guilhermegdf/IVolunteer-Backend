@@ -79,6 +79,10 @@ class ONGsModel(db.Model):
     def get_by_username(value):
         return ONGsModel.query.filter_by(username=value).first()
 
+    @staticmethod
+    def get_by_area(value):
+        return ONGsModel.query.filter_by(area_atuacao=value)
+
     def __repr(self):
         return '<id {}>'.format(self.id)
 
