@@ -26,7 +26,7 @@ class ONGsModel(db.Model):
     name = db.Column(db.String(355), nullable=False)
     descricao = db.Column(db.String(355), nullable=False)
     status = db.Column(db.Boolean)
-    created_at = db.Column(db.DateTime)
+    created_at = db.Column(db.String(20))
 
     def __init__(self, data):
 
@@ -102,5 +102,5 @@ class ONGsSchema(Schema):
     phone = fields.Str(required=True)
     name = fields.Str(required=True)
     status = fields.Boolean(dump_only=True)
-    created_at = fields.DateTime(dump_only=True)
+    created_at = fields.Str(dump_only=True)
     descricao = fields.Str(required=True)

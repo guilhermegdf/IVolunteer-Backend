@@ -23,7 +23,7 @@ class VolunteerModel(db.Model):
     state = db.Column(db.String(355), nullable=False)
     profession_id = db.Column(db.Integer, db.ForeignKey('tb_professions.id'), nullable=False)
     status = db.Column(db.Boolean)
-    created_at = db.Column(db.DateTime)
+    created_at = db.Column(db.String(20))
 
     def __init__(self, data):
 
@@ -91,4 +91,4 @@ class VolunteerSchema(Schema):
     state = fields.Str(required=True)
     profession_id = fields.Int(required=True)
     status = fields.Boolean(dump_only=True)
-    created_at = fields.DateTime(dump_only=True)
+    created_at = fields.Str(dump_only=True)
