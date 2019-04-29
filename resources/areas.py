@@ -21,8 +21,8 @@ class AssistenciaSocial(Resource):
 
         else:
             res = ONGsModel.get_by_area('assistencia_social')
-            data = ong_schema.dump(res)
-            
+            data = ong_schema.dump(res).data
+            print(data)
         return custom_response(data, 200)
 
 class Cultura(Resource):
@@ -38,7 +38,7 @@ class Cultura(Resource):
 
         else:
             res = ONGsModel.get_by_area('cultura')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
             
         return custom_response(data, 200)
 
@@ -55,7 +55,7 @@ class Saude(Resource):
 
         else:
             res = ONGsModel.get_by_area('saude')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
             
         return custom_response(data, 200)
 
@@ -72,7 +72,7 @@ class MeioAmbiente(Resource):
 
         else:
             res = ONGsModel.get_by_area('meio-ambiente')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
 
         return custom_response(data, 200)
 
@@ -89,7 +89,7 @@ class DevDefesaDireito(Resource):
 
         else:
             res = ONGsModel.get_by_area('dev_defesa_direito')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
             
         return custom_response(data, 200)
 
@@ -106,7 +106,7 @@ class Habitacao(Resource):
 
         else:
             res = ONGsModel.get_by_area('habitacao')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
             
         return custom_response(data, 200)
 
@@ -123,6 +123,6 @@ class EducacaoPesquisa(Resource):
 
         else:
             res = ONGsModel.get_by_area('educacao_pesquisa')
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
             
         return custom_response(data, 200)
