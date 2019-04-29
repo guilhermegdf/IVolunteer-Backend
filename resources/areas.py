@@ -71,7 +71,7 @@ class MeioAmbiente(Resource):
             data =filter_data(res_schema, 'volunteer')
 
         else:
-            res = ONGsModel.get_by_area('meio ambiente')
+            res = ONGsModel.get_by_area('meio-ambiente')
             data = ong_schema.dump(res)
 
         return custom_response(data, 200)
