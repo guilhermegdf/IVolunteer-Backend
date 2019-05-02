@@ -61,11 +61,11 @@ class ONGsModel(db.Model):
 
     @staticmethod
     def get_all_ong():
-        return VolunteerModel.query.all()
+        return ONGsModel.query.all()
 
     @staticmethod
     def get_one_ong(id):
-        return VolunteerModel.query.get(id)
+        return ONGsModel.query.get(id)
 
     @staticmethod
     def get_by_email(value):

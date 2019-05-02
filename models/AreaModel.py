@@ -93,5 +93,5 @@ class AreaSchema(Schema):
     dev_defesa_direito = fields.Boolean(required=True)
     habitacao = fields.Boolean(required=True)
     educacao_pesquisa = fields.Boolean(required=True)
-    volunteer_id = fields.Int(required=True)
+    volunteer_id = fields.Int(required=True, load_only=True)
     volunteer = fields.Nested(VolunteerSchema, required=False)

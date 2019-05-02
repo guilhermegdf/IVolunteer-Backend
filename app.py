@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 cors = CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://postgres:folklore2@localhost/db_ivolunteer')
+app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://pmrdqcokniwazt:729e52602d279adb94184e4dcbc4257ce54bf18e2c07eb66eb6d4e9e68c2f1af@ec2-50-17-246-114.compute-1.amazonaws.com/dkb32pkrb37q9')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = '#9FvjX%X/=A]?`=A;1ih[{:MY*kCgM'
 
