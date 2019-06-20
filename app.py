@@ -9,7 +9,7 @@ from resources.signup_ong import SignupOng
 from resources.login_volunteer import LoginVolunteer
 from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
-from resources.user_details import MyDetails, AccountDetails
+from resources.user_details import MyDetails, AccountDetails, UserSearch
 
 app = Flask(__name__)
 
@@ -39,6 +39,8 @@ api.add_resource(Cultura, '/cultura')
 api.add_resource(Saude, '/saude')
 api.add_resource(Habitacao, '/habitacao')
 api.add_resource(MeioAmbiente, '/meio-ambiente')
+api.add_resource(UserSearch, '/search/<search_term>')
+
 
 if __name__ == '__main__':
     from db import db

@@ -18,12 +18,57 @@ class MyDetails(Resource):
         claims = get_jwt_claims()
  
         if claims.get('type') == 'ONG':
+            print(claims.get('id'))
             res = ONGsModel.get_one_ong(claims.get('id'))
-            data = ong_schema.dump(res)
+            data = ong_schema.dump(res).data
+            print(data)
         
-        if claims.get('type') == 'Volunteer':
+        elif claims.get('type') == 'Volunteer':
             res = VolunteerModel.get_one_volunteers(claims.get('id'))
             data = area_schema.dump(res.options[0]).data
+        else:
+            data = {'error':'Not found ID'}
+            return custom_response(data, 400)
+
+        return custom_response(data, 200)
+
+    @jwt_required
+    def put(self):
+
+        req_data = request.get_json().get('data')
+
+        claims = get_jwt_claims()
+ 
+        if claims.get('type') == 'ONG':
+            data, error = ong_schema.load(req_data)
+            if error:
+                return custom_response(error, 400)
+
+            ong = ONGsModel.get_one_ong(claims.get('id'))
+            ong.update(data)
+
+        elif claims.get('type') == 'Volunteer':
+            data, error = volunteer_schema.load(req_data.get('volunteer'))
+            
+            if error:
+                return custom_response(error, 400)
+            
+            volunteer = VolunteerModel.get_one_volunteers(claims.get('id'))
+            volunteer.update(data)
+
+            req_data['volunteer_id'] = claims.get('id')
+            data, error = area_schema.load(req_data)
+            
+            if error:
+                return custom_response(error, 400)
+            area_data = {}
+            for i in data:
+                if i != 'volunteer':
+                    area_data[i]=  data[i]
+            areas = AreaModel.get_one_volunteer_area(claims.get('id'))
+            areas.update(area_data)
+
+
         else:
             data = {'error':'Not found ID'}
             return custom_response(data, 400)
@@ -34,14 +79,26 @@ class AccountDetails(Resource):
 
     @jwt_optional
     def get(self, id):
-        
         claims = get_jwt_claims()
         if claims.get('type') == 'ONG':
             res = VolunteerModel.get_one_volunteers(id)
             data = area_schema.dump(res.options[0]).data
-            print(data)
+
         else:
             res = ONGsModel.get_one_ong(id)
             data = ong_schema.dump(res).data
+
+        return custom_response(data, 200)
+
+class UserSearch(Resource):
+    def get(self, search_term):
+        claims = get_jwt_claims()
+        if claims.get('type') == 'ONG':
+            res = VolunteerModel.get_by_filter(search_term)
+            data = area_schema.dump(res.options[0]).data
+
+        else:
+            res = ONGsModel.get_by_filter(search_term)
+            data = ong_schema.dump(res).data
         
-        return custom_response(data, 400)
+        return custom_response(data, 200)

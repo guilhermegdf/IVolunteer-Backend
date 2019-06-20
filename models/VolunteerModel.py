@@ -69,6 +69,10 @@ class VolunteerModel(db.Model):
     def get_by_username(value):
         return VolunteerModel.query.filter_by(username=value).first()
 
+    @staticmethod
+    def get_by_filter(value):
+        return VolunteerModel.query.filter(VolunteerModel.name.like('%'+value+'%')).all()
+
     def __generate_hash(self, password):
         return bcrypt.generate_password_hash(password, rounds=10).decode("utf-8")
 

@@ -83,6 +83,10 @@ class ONGsModel(db.Model):
     def get_by_area(value):
         return ONGsModel.query.filter_by(area_atuacao=value)
 
+    @staticmethod
+    def get_by_filter(value):
+        return ONGsModel.query.filter(ONGsModel.name.endswith('Ong')).all()
+
     def __repr(self):
         return '<id {}>'.format(self.id)
 

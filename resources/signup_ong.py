@@ -11,9 +11,8 @@ schema = ONGsSchema()
 class SignupOng(Resource):
 
     def post(self):
-        req_data = request.get_json()
+        req_data = request.get_json().get('data')
         data, error = schema.load(req_data)
-
         if error:
             return custom_response(error, 400)
 

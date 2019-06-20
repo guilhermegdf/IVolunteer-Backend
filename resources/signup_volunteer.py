@@ -12,9 +12,9 @@ class SignupVolunter(Resource):
     def post(self):
 
         req_data = request.get_json()
-        data, error = schema.load(req_data)
-
+        data, error = schema.load(req_data['data'])
         if error:
+            print('error1', error)
             return custom_response(error, 400)
 
         # check if email already exist in the db
