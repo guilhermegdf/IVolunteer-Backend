@@ -22,7 +22,7 @@ class AssistenciaSocial(Resource):
         else:
             res = ONGsModel.get_by_area('assistencia_social')
             data = ong_schema.dump(res).data
-            print(data)
+
         return custom_response(data, 200)
 
 class Cultura(Resource):

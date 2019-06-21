@@ -18,10 +18,8 @@ class MyDetails(Resource):
         claims = get_jwt_claims()
  
         if claims.get('type') == 'ONG':
-            print(claims.get('id'))
             res = ONGsModel.get_one_ong(claims.get('id'))
             data = ong_schema.dump(res).data
-            print(data)
         
         elif claims.get('type') == 'Volunteer':
             res = VolunteerModel.get_one_volunteers(claims.get('id'))
