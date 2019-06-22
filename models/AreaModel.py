@@ -6,13 +6,13 @@ class AreaModel(db.Model):
     __tablename__ = 'tb_area'
 
     id = db.Column(db.Integer, primary_key=True)
-    assistencia_social = db.Column(db.Boolean)
-    cultura = db.Column(db.Boolean)
-    saude = db.Column(db.Boolean)
-    meio_ambiente = db.Column(db.Boolean)
-    dev_defesa_direito = db.Column(db.Boolean)
-    habitacao = db.Column(db.Boolean)
-    educacao_pesquisa = db.Column(db.Boolean)
+    assistencia_social = db.Column(db.Boolean, nullable=False)
+    cultura = db.Column(db.Boolean, nullable=False)
+    saude = db.Column(db.Boolean, nullable=False)
+    meio_ambiente = db.Column(db.Boolean, nullable=False)
+    dev_defesa_direito = db.Column(db.Boolean, nullable=False)
+    habitacao = db.Column(db.Boolean, nullable=False)
+    educacao_pesquisa = db.Column(db.Boolean, nullable=False)
     volunteer_id = db.Column(db.Integer, db.ForeignKey('tb_volunteers.id'), nullable=False)
     volunteer = db.relationship("VolunteerModel", uselist=False, backref="options")
 

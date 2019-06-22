@@ -39,8 +39,6 @@ class MyDetails(Resource):
  
         if claims.get('type') == 'ONG':
             data, error = ong_schema.load(req_data)
-            print(data)
-            print(error)
             if error:
                 return custom_response(error, 400)
 

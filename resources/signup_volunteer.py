@@ -31,8 +31,8 @@ class SignupVolunter(Resource):
         user = VolunteerModel(data)
         user.save()
 
-        req_data['volunteer_id'] = user.id
-        data_area, error = schema_area.load(req_data)
+        data_area, error = schema_area.load(req_data['data'])
+        data_area['volunteer_id'] = user.id
         area = AreaModel(data_area)
         area.save()
 
