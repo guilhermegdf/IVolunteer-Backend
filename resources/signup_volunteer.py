@@ -14,20 +14,19 @@ class SignupVolunter(Resource):
         req_data = request.get_json()
         data, error = schema.load(req_data['data'])
         if error:
-            print('error1', error)
             return custom_response(error, 400)
 
         # check if email already exist in the db
         user_in_db = VolunteerModel.get_by_email(data.get('email'))
         if user_in_db:
-            message = {'error': 'Email already exist, please supply another email address'}
-            return custom_response(message, 400)
+            message = {'error': 'Este e-mail já esta cadastrado'}
+            return custom_response(message, 200)
 
         # check if username already exist in the db
         user_in_db = VolunteerModel.get_by_username(data.get('username'))
         if user_in_db:
-            message = {'error': 'User already exist, please supply another username'}
-            return custom_response(message, 400)
+            message = {'error': 'Este nome de usuario já existe'}
+            return custom_response(message, 200)
 
         user = VolunteerModel(data)
         user.save()

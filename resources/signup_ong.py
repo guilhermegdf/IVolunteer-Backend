@@ -18,28 +18,27 @@ class SignupOng(Resource):
 
         user_in_db = ONGsModel.get_by_email(data.get('email'))
         if user_in_db:
-            message = {'error': 'Email already exist, please supply another email address'}
-            return custom_response(message, 400)
+            message = {'error': 'Este e-mail já esta cadastrado'}
+            return custom_response(message, 200)
 
         # check if username already exist in the db
         user_in_db = ONGsModel.get_by_username(data.get('username'))
         if user_in_db:
-            message = {'error': 'User already exist, please supply another username'}
-            return custom_response(message, 400)
+            message = {'error': 'Este nome de usuario já existe'}
+            return custom_response(message, 200)
 
         if cpfcnpj.validate(data.get('cnpj')):
 
             user_in_db = ONGsModel.get_by_cnpj(data.get('cnpj'))
             if user_in_db:
-                message = {'error': 'CNPJ already exist, please supply another cnpj'}
-                return custom_response(message, 400)
+                message = {'error': 'CNPJ já cadastrado, insira um novo valor'}
+                return custom_response(message, 200)
 
         else:
-            message = {'error': 'invalid CPNJ'}
-            return custom_response(message, 400)
+            message = {'error': 'CNPJ inválido'}
+            return custom_response(message, 200)
 
-        data = {**data, **get_lat_long(data['address'])}
-
+        data = {**data, **get_lat_long(data.get('address'))}
         user = ONGsModel(data)
         user.save()
         message = {'return':'ONG register Okay'}
