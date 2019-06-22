@@ -25,6 +25,8 @@ class ONGsModel(db.Model):
     phone = db.Column(db.String(50), nullable=False)
     name = db.Column(db.String(355), nullable=False)
     descricao = db.Column(db.String(355), nullable=False)
+    lat = db.Column(db.String(20), nullable=True)
+    lng = db.Column(db.String(20), nullable=True)
     status = db.Column(db.Boolean)
     created_at = db.Column(db.String(20))
 
@@ -42,6 +44,8 @@ class ONGsModel(db.Model):
         self.state = data.get('state')
         self.phone = data.get('phone')
         self.name = data.get('name')
+        self.lat = data.get('lat')
+        self.lng = data.get('long')
         self.descricao = data.get('descricao')
         self.status = True
         self.created_at = pst_now.strftime("%d-%m-%Y %H:%M")
@@ -105,6 +109,8 @@ class ONGsSchema(Schema):
     state = fields.Str(required=True)
     phone = fields.Str(required=True)
     name = fields.Str(required=True)
+    lat = fields.Str(required=False)
+    lng = fields.Str(required=False)
     status = fields.Boolean(dump_only=True)
     created_at = fields.Str(dump_only=True)
     descricao = fields.Str(required=True)

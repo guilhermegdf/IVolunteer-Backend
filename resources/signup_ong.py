@@ -3,7 +3,7 @@ from flask_restful import Resource, reqparse
 from flask_jwt_extended import jwt_required
 
 from models.ONGsModel import ONGsModel, ONGsSchema
-from utils.shortcuts import custom_response
+from utils.shortcuts import custom_response, get_lat_long
 from pycpfcnpj import cpfcnpj
 
 schema = ONGsSchema()
@@ -16,7 +16,6 @@ class SignupOng(Resource):
         if error:
             return custom_response(error, 400)
 
-        # check if email already exist in the db
         user_in_db = ONGsModel.get_by_email(data.get('email'))
         if user_in_db:
             message = {'error': 'Email already exist, please supply another email address'}
@@ -38,6 +37,8 @@ class SignupOng(Resource):
         else:
             message = {'error': 'invalid CPNJ'}
             return custom_response(message, 400)
+
+        data = {**data, **get_lat_long(data['address'])}
 
         user = ONGsModel(data)
         user.save()
