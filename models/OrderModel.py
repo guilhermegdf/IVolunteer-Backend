@@ -55,7 +55,6 @@ class OrderModel(db.Model):
 
     @staticmethod
     def get_by_existing(event_id, volunteer_id ):
-        print(event_id, volunteer_id )
         return OrderModel.query.filter_by(event_id=event_id, volunteer_id=volunteer_id).first()
 
     @staticmethod

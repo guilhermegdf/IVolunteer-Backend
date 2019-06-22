@@ -46,5 +46,4 @@ class OneEvent(Resource):
         data = schema.dump(res).data
         data['ong_name'] = data['ong']['name']
         data['ong_id'] = data['ong']['id']
-        print(data)
         return custom_response(data, 200)

@@ -18,7 +18,6 @@ def get_lat_long(data):
         url = "https://maps.googleapis.com/maps/api/geocode/json?address={}+View,+BR&key=AIzaSyB4iJ2uzhrIWGtIsOSMdKqHV6aiU8nnAVI".format(address)
         response = requests.get(url)
         response = response.json()
-        print(response)
         if response['status'] == 'ZERO_RESULTS':
                 return {'lat': '-23,5486','lng': '-46,6392'}
         else:

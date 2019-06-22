@@ -45,7 +45,7 @@ class ONGsModel(db.Model):
         self.phone = data.get('phone')
         self.name = data.get('name')
         self.lat = data.get('lat')
-        self.lng = data.get('long')
+        self.lng = data.get('lng')
         self.descricao = data.get('descricao')
         self.status = True
         self.created_at = pst_now.strftime("%d-%m-%Y %H:%M")
