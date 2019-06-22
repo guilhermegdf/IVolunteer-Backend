@@ -12,10 +12,11 @@ def custom_response(res, status_code):
 def filter_data(data, val):
     return [ res.get(val) for res in data.data ]
 
-def get_lat_long(data):
+def get_lat_long(address, state):
 
-        address = data.replace(' ', '+')
-        url = "https://maps.googleapis.com/maps/api/geocode/json?address={}+View,+BR&key=AIzaSyB4iJ2uzhrIWGtIsOSMdKqHV6aiU8nnAVI".format(address)
+        address = address.replace(' ', '+')
+        state = state.replace(' ', '+')
+        url = "https://maps.googleapis.com/maps/api/geocode/json?address={}+View,+{}+BR&key=AIzaSyB4iJ2uzhrIWGtIsOSMdKqHV6aiU8nnAVI".format(address, state)
         response = requests.get(url)
         response = response.json()
         if response['status'] == 'ZERO_RESULTS':

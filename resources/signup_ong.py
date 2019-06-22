@@ -38,7 +38,7 @@ class SignupOng(Resource):
             message = {'error': 'CNPJ inválido'}
             return custom_response(message, 202)
 
-        data = {**data, **get_lat_long(data.get('address'))}
+        data = {**data, **get_lat_long(data.get('address'), data.get('state'))}
         user = ONGsModel(data)
         user.save()
         message = {'return':'ONG register Okay'}
