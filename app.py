@@ -10,7 +10,8 @@ from resources.login_volunteer import LoginVolunteer
 from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 from resources.user_details import MyDetails, AccountDetails, UserSearch
-from resources.events import Events
+from resources.events import Events, OneEvent
+from resources.order import Oders
 
 app = Flask(__name__)
 
@@ -19,6 +20,7 @@ cors = CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('DATABASE_URL', 'postgresql://pmrdqcokniwazt:729e52602d279adb94184e4dcbc4257ce54bf18e2c07eb66eb6d4e9e68c2f1af@ec2-50-17-246-114.compute-1.amazonaws.com/dkb32pkrb37q9')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = '#9FvjX%X/=A]?`=A;1ih[{:MY*kCgM'
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False
 
 jwt = JWTManager(app)
 api = Api(app)
@@ -42,6 +44,8 @@ api.add_resource(Habitacao, '/habitacao')
 api.add_resource(MeioAmbiente, '/meio-ambiente')
 api.add_resource(UserSearch, '/search/<search_term>')
 api.add_resource(Events, '/events')
+api.add_resource(OneEvent, '/events/<int:id>')
+api.add_resource(Oders, '/orders')
 
 if __name__ == '__main__':
     from db import db

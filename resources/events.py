@@ -6,6 +6,7 @@ from models.EventModel import EventModel, EventSchema
 
 schema = EventSchema()
 schema_many = EventSchema(many=True)
+
 class Events(Resource):
 
     @jwt_required
@@ -37,4 +38,13 @@ class Events(Resource):
     def get(self):
         res = EventModel.get_all_events()
         data = schema_many.dump(res).data
+        return custom_response(data, 200)
+
+class OneEvent(Resource):
+    def get(self, id):
+        res = EventModel.get_one_events(id)
+        data = schema.dump(res).data
+        data['ong_name'] = data['ong']['name']
+        data['ong_id'] = data['ong']['id']
+        print(data)
         return custom_response(data, 200)

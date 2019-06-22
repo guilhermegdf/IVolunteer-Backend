@@ -17,6 +17,9 @@ class EventModel(db.Model):
     title = db.Column(db.String(355), nullable=False)
     description = db.Column(db.String(355), nullable=False)
     created_at = db.Column(db.String(20))
+    ong_id = db.Column(db.Integer, db.ForeignKey('tb_ongs.id'), nullable=False)
+    ong = db.relationship("ONGsModel", uselist=False, backref="events")
+
 
     def __init__(self, data):
 
