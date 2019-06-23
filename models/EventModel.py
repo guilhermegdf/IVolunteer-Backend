@@ -12,8 +12,8 @@ class EventModel(db.Model):
     __tablename__ = 'tb_events'
 
     id = db.Column(db.Integer, primary_key=True)
-    start = db.Column(db.Date, nullable=False)
-    end = db.Column(db.Date, nullable=False)
+    start = db.Column(db.DateTime, nullable=False)
+    end = db.Column(db.DateTime, nullable=False)
     title = db.Column(db.String(355), nullable=False)
     description = db.Column(db.String(355), nullable=False)
     created_at = db.Column(db.String(20))
@@ -60,8 +60,8 @@ class EventModel(db.Model):
 
 class EventSchema(Schema):
     id = fields.Int(dump_only=True)
-    start = fields.Date()
-    end = fields.Date()
+    start = fields.DateTime()
+    end = fields.DateTime()
     title = fields.Str(required=True)
     description = fields.Str(required=True)
     created_at = fields.Str(dump_only=True)

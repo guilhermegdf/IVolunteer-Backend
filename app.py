@@ -11,7 +11,7 @@ from resources.login_ong import LoginOng
 from resources.areas import AssistenciaSocial, EducacaoPesquisa, DevDefesaDireito, Cultura, Habitacao, MeioAmbiente, Saude
 from resources.user_details import MyDetails, AccountDetails, UserSearch
 from resources.events import Events, OneEvent
-from resources.order import Oders
+from resources.order import Oders, EditOrders
 
 app = Flask(__name__)
 
@@ -46,6 +46,7 @@ api.add_resource(UserSearch, '/search/<search_term>')
 api.add_resource(Events, '/events')
 api.add_resource(OneEvent, '/events/<int:id>')
 api.add_resource(Oders, '/orders')
+api.add_resource(EditOrders, '/orders/<int:id>')
 
 if __name__ == '__main__':
     from db import db

@@ -50,12 +50,25 @@ class OrderModel(db.Model):
         return OrderModel.query.all()
 
     @staticmethod
-    def get_one_events(id):
+    def get_one(id):
         return OrderModel.query.get(id)
 
     @staticmethod
     def get_by_existing(event_id, volunteer_id ):
         return OrderModel.query.filter_by(event_id=event_id, volunteer_id=volunteer_id).first()
+
+    @staticmethod
+    def get_by_ong(id):
+        return OrderModel.query.filter_by(ong_id=id)
+
+    @staticmethod
+    def get_by_volunteer(id):
+        return OrderModel.query.filter_by(volunteer_id=id)
+
+    @staticmethod
+    def get_by_event(id):
+        return OrderModel.query.filter_by(event_id=id)
+
 
     @staticmethod
     def get_all_completed():

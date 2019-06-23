@@ -5,6 +5,7 @@ from utils.shortcuts import custom_response, filter_data
 from models.OrderModel import OrderModel, OrderSchema
 
 schema = OrderSchema()
+order_schema = OrderSchema(many=True)
 
 class Oders(Resource):
 
@@ -39,7 +40,28 @@ class Oders(Resource):
 
         claims = get_jwt_claims()
         if claims.get('type') == 'Volunteer':
-            pass
+            res = OrderModel.get_by_volunteer(claims.get('id'))
+            res_schema = order_schema.dump(res)
+            return res_schema
 
         if claims.get('type') == 'ONG':
-            pass
+            res = OrderModel.get_by_ong(claims.get('id'))
+            res_schema = order_schema.dump(res)
+            return res_schema
+
+class EditOrders(Resource):
+    @jwt_required
+    def delete(self, id):
+        res = OrderModel.get_one(id)
+        res.delete()
+        message = {'response':'Solicitação recusada com sucesso.'}
+    
+    @jwt_required
+    def put(self, id):
+        req = request.get_json().get('data')
+        res = OrderModel.get_one(id)
+        print(req)
+        print(res)
+        res.update(req)
+        message = {'response':'Atualizado com sucesso.'}
+        return custom_response(message, 200)
