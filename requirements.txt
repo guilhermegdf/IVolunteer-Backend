@@ -23,7 +23,7 @@ psycopg2==2.7.7
 public==2019.4.13
 pycparser==2.19
 pycpfcnpj==1.5.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 python-dateutil==2.8.0
 python-editor==1.0.4
 pytz==2018.9
